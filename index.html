@@ -3,11 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | PlayMode</title>
+      <title>LearnScape Immersives PlayMode</title>
   </head>
+  <style>
+        body
+		 {
+            overflow: hidden; /* This removes both horizontal and vertical scroll bars */
+        	 }
+    </style>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" width=1920 height=1080 style="width: 1920px; height: 1080px; background: #231F20"></canvas>
     <script src="Build/LearnScapeImmersives.loader.js"></script>
+        function updateCanvasSize() {
+        var canvas = document.getElementById("unity-canvas"); // Replace with your actual canvas ID
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+
+        canvas.style.width = windowWidth + "px";
+        canvas.style.height = windowHeight + "px";
+    }
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
